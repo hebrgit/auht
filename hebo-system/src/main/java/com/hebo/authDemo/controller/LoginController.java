@@ -1,6 +1,7 @@
 package com.hebo.authDemo.controller;
 
 
+import com.hebo.dto.Response;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class LoginController {
 
     @GetMapping("/login")
-    public String Login (){
-
-        return "sucess";
+    public Response Login (){
+        return Response.success();
     }
 }
