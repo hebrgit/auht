@@ -39,4 +39,12 @@ public class UserController {
 
     }
 
+
+
+    @GetMapping("/list")
+    public Response list () {
+
+        return Response.success();
+
+    }
 }
