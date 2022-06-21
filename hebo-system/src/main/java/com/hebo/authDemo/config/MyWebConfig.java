@@ -1,5 +1,6 @@
 package com.hebo.authDemo.config;
 
+import com.hebo.authDemo.service.impl.LoginUserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.User;
@@ -33,6 +34,11 @@ public class MyWebConfig implements WebMvcConfigurer {
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .maxAge(3600);    }
+
+    @Bean
+    public PasswordEncoder getPasswordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
 
 
 }

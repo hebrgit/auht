@@ -15,5 +15,5 @@ import com.hebo.dto.Response;
  */
 public interface IUserService extends IService<User> {
 
-    Response login(User user);
+    User login(User user);
 }

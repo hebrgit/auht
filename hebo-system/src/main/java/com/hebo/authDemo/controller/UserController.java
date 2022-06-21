@@ -32,10 +32,8 @@ public class UserController {
     private IUserService userService;
     @PostMapping("/login")
     public Response Login (@RequestBody User user) {
-
-
-        Response response = userService.login(user);
-        return Response.success(response);
+        User user1 = userService.login(user);
+        return Response.success(user1);
 
     }
 
