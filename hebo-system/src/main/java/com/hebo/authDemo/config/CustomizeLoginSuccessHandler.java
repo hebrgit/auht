@@ -30,11 +30,12 @@ public class CustomizeLoginSuccessHandler implements AuthenticationSuccessHandle
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        Response result = Response.success(200,"登录成功",authentication);
+        Response result = Response.success(Response.getSUCCESS(),"登录成功",authentication);
 
         LoginUser principal = (LoginUser)authentication.getPrincipal();
         User user = principal.getUser();
         Long userId = user.getUserId();
+//        JWTSignerUtil.createSigner()
 
         response.setContentType("text/json;charset=utf-8");
 //        response.addHeader("auth");

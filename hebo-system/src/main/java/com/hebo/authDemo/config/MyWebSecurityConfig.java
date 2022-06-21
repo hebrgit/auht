@@ -57,13 +57,12 @@ public class MyWebSecurityConfig {
                 .authorizeRequests(authorize -> authorize.antMatchers("/login","/user/login").permitAll()
                         .anyRequest().authenticated()
                 )
-                .exceptionHandling()
-                .authenticationEntryPoint(entryPoint)
-                .and()
                 .formLogin().permitAll()
-
                 .successHandler(successHandler)
                 .failureHandler(failHandler)
+                .and()
+                .exceptionHandling()
+                .authenticationEntryPoint(entryPoint)
                 .and()
                 .authenticationProvider(authenticationProvider)
                 .build();

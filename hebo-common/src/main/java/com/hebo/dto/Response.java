@@ -8,15 +8,16 @@ import java.io.Serializable;
  * @description: TODO
  * @date 2022/6/16 14:11
  */
+
 public class Response<T> implements Serializable {
 
-    private final static String MSG_FAIL = "失败";
+    public final static String MSG_FAIL = "失败";
 
-    private final static String MSG_SUCCESS = "成功";
+    public final static String MSG_SUCCESS = "成功";
 
-    private final static int FAIL = -1;
+    public final static int FAIL = -1;
 
-    private final static  int SUCCESS = 0;
+    public final static  int SUCCESS = 0;
 
     private int code;
 
@@ -84,5 +85,21 @@ public class Response<T> implements Serializable {
 
     public void setData(T data) {
         this.data = data;
+    }
+
+    public static String getMsgFail() {
+        return MSG_FAIL;
+    }
+
+    public static String getMsgSuccess() {
+        return MSG_SUCCESS;
+    }
+
+    public static int getFAIL() {
+        return FAIL;
+    }
+
+    public static int getSUCCESS() {
+        return SUCCESS;
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @Author hebo
  * @Date 2022/6/19 20:20
  **/
-@ControllerAdvice
+//@ControllerAdvice
 @ResponseBody
 public class GloabException  {
 
@@ -21,7 +21,7 @@ public class GloabException  {
      * @param ex
      * @return
      */
-    @ExceptionHandler(HebrException.class)
+    @ExceptionHandler(UsernameAndPasswordException.class)
     @ResponseStatus(value = HttpStatus.UNAUTHORIZED)
     public Response handleUnexpectedServer(Exception ex) {
 

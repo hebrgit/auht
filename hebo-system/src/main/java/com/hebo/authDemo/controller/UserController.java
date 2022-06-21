@@ -2,7 +2,6 @@ package com.hebo.authDemo.controller;
 
 
 import com.hebo.authDemo.entity.User;
-import com.hebo.authDemo.exception.HebrException;
 import com.hebo.authDemo.service.IUserService;
 import com.hebo.dto.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.annotation.PostConstruct;
 
 /**
  * <p>

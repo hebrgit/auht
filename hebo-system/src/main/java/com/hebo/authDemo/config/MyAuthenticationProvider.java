@@ -1,14 +1,11 @@
 package com.hebo.authDemo.config;
 
-import com.hebo.authDemo.exception.HebrException;
-import com.hebo.authDemo.service.impl.UserServiceImpl;
+import com.hebo.authDemo.exception.UsernameAndPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -44,7 +41,7 @@ public class MyAuthenticationProvider extends AbstractUserDetailsAuthenticationP
         String presentedPassword = authentication.getCredentials().toString();
         if (!this.passwordEncoder.matches(presentedPassword, userDetails.getPassword())) {
             this.logger.debug("密码不正确！");
-            throw new HebrException("用户或密码不对！");
+            throw new UsernameAndPasswordException("用户名或密码不正确！");
         }
     }
 
