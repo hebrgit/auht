@@ -3,11 +3,13 @@ package com.hebo.authDemo.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
 import java.util.Collection;
+import java.util.Objects;
 
 /**
  * @ClassName LoginUser
@@ -24,7 +26,7 @@ public class LoginUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return user.getSysMenus();
     }
 
     @Override
@@ -54,6 +56,11 @@ public class LoginUser implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+
+        if (Objects.nonNull(user) && 1 == user.getStatus()){
+
+            return true;
+        }
+        return false;
     }
 }

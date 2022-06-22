@@ -17,23 +17,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
-
-
     @Override
-
-    public User login(User user) {
-
-       // Authentication authenticate方法进行验证
-//        UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword());
-//        Authentication authenticate = myAuthenticationManager.authenticate(authenticationToken);
-        //如果验证未通过，给出相应的提示
-//        if (Objects.isNull(authenticate)){
-//            throw new HebrException("登录失败！");
-//        }
-
-//        authenticate.getPrincipal()
-        //如果认证通过，使用userid 生成jwt，jwt 封装进Response
-
-        return new User();
+    public User selectUserInfo(String userName) {
+        return this.baseMapper.selectUserInfo(userName);
     }
 }

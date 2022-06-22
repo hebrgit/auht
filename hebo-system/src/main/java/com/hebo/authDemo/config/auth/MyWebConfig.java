@@ -1,4 +1,4 @@
-package com.hebo.authDemo.config;
+package com.hebo.authDemo.config.auth;
 
 import com.hebo.authDemo.service.impl.LoginUserService;
 import org.springframework.context.annotation.Bean;

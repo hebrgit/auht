@@ -1,4 +1,4 @@
-package com.hebo.authDemo.config;
+package com.hebo.authDemo.config.auth;
 
 import com.alibaba.fastjson.JSON;
 import com.hebo.dto.Response;

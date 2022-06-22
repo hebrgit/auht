@@ -1,8 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
-/.idea/*
+/.idea
 /hebo-*/target/*/*
 /*.iml
 /*/*.iml
 /*.log
 /logs
 /*/target/*/*
+/com.hebo.authDemo/*

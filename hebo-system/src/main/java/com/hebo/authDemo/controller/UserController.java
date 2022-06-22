@@ -27,13 +27,6 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
-    @PostMapping("/login")
-    public Response Login (@RequestBody User user) {
-        User user1 = userService.login(user);
-        return Response.success(user1);
-
-    }
-
 
 
     @GetMapping("/list")

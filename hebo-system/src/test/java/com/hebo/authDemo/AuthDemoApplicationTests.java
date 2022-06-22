@@ -25,7 +25,7 @@ class AuthDemoApplicationTests {
 	@Test
 	public void test1() {
 		 BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		System.out.println(encoder.encode("123"));
+		System.out.println(encoder.encode("1234"));
 	}
 	@Test
 	public void test(){

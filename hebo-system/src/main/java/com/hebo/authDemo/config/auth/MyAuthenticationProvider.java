@@ -1,4 +1,4 @@
-package com.hebo.authDemo.config;
+package com.hebo.authDemo.config.auth;
 
 import com.hebo.authDemo.exception.UsernameAndPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;

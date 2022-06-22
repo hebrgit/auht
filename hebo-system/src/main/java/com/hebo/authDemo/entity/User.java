@@ -1,12 +1,12 @@
 package com.hebo.authDemo.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.List;
 //import io.swagger.annotations.ApiModel;
 //import io.swagger.annotations.ApiModelProperty;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
@@ -44,4 +44,9 @@ public class User implements Serializable {
 
     private int status;
 
+    @TableField(exist = false)
+    private List<SysMenu> sysMenus;
+
+
+    private List<SysUserRole> sysUserRoles;
 }

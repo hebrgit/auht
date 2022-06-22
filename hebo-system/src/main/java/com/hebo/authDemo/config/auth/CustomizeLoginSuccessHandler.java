@@ -1,4 +1,4 @@
-package com.hebo.authDemo.config;
+package com.hebo.authDemo.config.auth;
 
 import cn.hutool.jwt.JWTUtil;
 import cn.hutool.jwt.signers.JWTSignerUtil;

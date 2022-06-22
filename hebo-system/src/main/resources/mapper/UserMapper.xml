@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hebo.authDemo.mapper.UserMapper">
 
+
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.hebo.authDemo.entity.User">
         <id column="user_id" property="userId" />
@@ -11,5 +12,22 @@
         <result column="create_time" property="createTime" />
         <result column="status" property="status"/>
     </resultMap>
+    <resultMap id="MyResultMap" type="com.hebo.authDemo.entity.User">
+        <id column="user_id" property="userId" />
+        <result column="username" property="username" />
+        <result column="mobile" property="mobile" />
+        <result column="password" property="password" />
+        <result column="create_time" property="createTime" />
+        <result column="status" property="status"/>
+        <collection property="sysUserRoles" column="user_id" ofType="com.hebo.authDemo.entity.SysUserRole" javaType="ArrayList" select="selectUserRole"/>
+    </resultMap>
+
+<select id="selectUserInfo" parameterType="string" resultMap="MyResultMap" >
+    select * from sys_user where username = #{username}
+</select>
+
+    <select id="selectUserRole" parameterType="string" resultType="com.hebo.authDemo.entity.SysUserRole" >
+        select * from sys_user_role where user_id = #{userId}
+    </select>
 
 </mapper>
