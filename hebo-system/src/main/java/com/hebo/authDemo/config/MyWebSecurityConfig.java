@@ -1,5 +1,6 @@
 package com.hebo.authDemo.config;
 
+import com.hebo.authDemo.filter.JwtAuthenticationFilter;
 import com.hebo.authDemo.service.impl.LoginUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -20,6 +21,7 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import java.net.HttpCookie;
 
@@ -45,6 +47,9 @@ public class MyWebSecurityConfig {
     @Autowired
      MyAuthenticationProvider authenticationProvider;
 
+    @Autowired
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
+
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 
@@ -65,6 +70,7 @@ public class MyWebSecurityConfig {
                 .authenticationEntryPoint(entryPoint)
                 .and()
                 .authenticationProvider(authenticationProvider)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
