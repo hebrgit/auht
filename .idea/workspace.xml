@@ -1,55 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="899f0051-803f-4611-802d-09cbfb6798ad" name="Default Changelist" comment="封装返回类型">
-      <change afterPath="$PROJECT_DIR$/hebo-common/src/main/java/com/hebo/utils/RedisCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/redis/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/controller/SysMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/controller/SysRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/controller/SysRoleMenuController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/controller/SysUserRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/SysMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/SysRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/SysRoleMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/SysUserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/mapper/SysMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/mapper/SysRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/mapper/SysRoleMenuMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/mapper/SysUserRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/ISysMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/ISysRoleMenuService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/ISysRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/ISysUserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/SysMenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/SysRoleMenuServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/SysRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/SysUserRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/utils/RedisCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/resources/mapper/SysMenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/resources/mapper/SysRoleMenuMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hebo-system/src/main/resources/mapper/SysUserRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="899f0051-803f-4611-802d-09cbfb6798ad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/CustomizeAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/CustomizeAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/CustomizeLoginFailHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/CustomizeLoginFailHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/CustomizeLoginSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/CustomizeLoginSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/MyAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/MyAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/MyWebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/MyWebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/MyWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/MyWebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/IUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/LoginUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/LoginUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/src/test/java/com/hebo/authDemo/AuthDemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/test/java/com/hebo/authDemo/AuthDemoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/target/classes/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hebo-system/target/test-classes/com/hebo/authDemo/AuthDemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/target/test-classes/com/hebo/authDemo/AuthDemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/MyWebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/config/auth/MyWebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/filter/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/hebo-system/src/main/java/com/hebo/authDemo/filter/JwtAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,13 +139,32 @@
       <option name="project" value="LOCAL" />
       <updated>1655814795988</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="生成类">
+      <created>1655901884217</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655901884218</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="封装返回类型" />
     <MESSAGE value="添加 MyAuthenticationManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 MyAuthenticationManager" />
+    <MESSAGE value="生成类" />
+    <option name="LAST_COMMIT_MESSAGE" value="生成类" />
   </component>
   <component name="WindowStateProjectService">
     <state x="563" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1655895791624">
@@ -201,10 +175,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="530" y="101" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1655705638643" />
-    <state x="395" y="4" key="CommitChangelistDialog2" timestamp="1655901826435">
+    <state x="395" y="4" key="CommitChangelistDialog2" timestamp="1655901882791">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="395" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1655901826435" />
+    <state x="395" y="4" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1655901882791" />
     <state width="498" height="466" key="DebuggerActiveHint" timestamp="1655897256616">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -213,62 +187,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="113" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1655692698933" />
-    <state width="1493" height="257" key="GridCell.Tab.0.bottom" timestamp="1655900851277">
+    <state width="1493" height="167" key="GridCell.Tab.0.bottom" timestamp="1655948452148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655900851277" />
-    <state width="1493" height="257" key="GridCell.Tab.0.center" timestamp="1655900851277">
+    <state width="1493" height="167" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655948452148" />
+    <state width="1493" height="167" key="GridCell.Tab.0.center" timestamp="1655948452148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1655900851277" />
-    <state width="1493" height="257" key="GridCell.Tab.0.left" timestamp="1655900851276">
+    <state width="1493" height="167" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1655948452148" />
+    <state width="1493" height="167" key="GridCell.Tab.0.left" timestamp="1655948452147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1655900851276" />
-    <state width="1493" height="257" key="GridCell.Tab.0.right" timestamp="1655900851277">
+    <state width="1493" height="167" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1655948452147" />
+    <state width="1493" height="167" key="GridCell.Tab.0.right" timestamp="1655948452148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1655900851277" />
-    <state width="1493" height="257" key="GridCell.Tab.1.bottom" timestamp="1655900851127">
+    <state width="1493" height="167" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1655948452148" />
+    <state width="1493" height="167" key="GridCell.Tab.1.bottom" timestamp="1655948474337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655900851126" />
-    <state width="1493" height="257" key="GridCell.Tab.1.center" timestamp="1655900851126">
+    <state width="1493" height="167" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1655948474337" />
+    <state width="1493" height="167" key="GridCell.Tab.1.center" timestamp="1655948474337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1655900851126" />
-    <state width="1493" height="257" key="GridCell.Tab.1.left" timestamp="1655900851126">
+    <state width="1493" height="167" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1655948474337" />
+    <state width="1493" height="167" key="GridCell.Tab.1.left" timestamp="1655948474337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1655900851126" />
-    <state width="1493" height="257" key="GridCell.Tab.1.right" timestamp="1655900851126">
+    <state width="1493" height="167" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1655948474337" />
+    <state width="1493" height="167" key="GridCell.Tab.1.right" timestamp="1655948474337">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1655900851126" />
+    <state width="1493" height="167" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1655948474337" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1655714372813">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1655714372813" />
-    <state x="147" y="65" key="MergeDialog" timestamp="1655800635258">
+    <state x="147" y="65" key="MergeDialog" timestamp="1655947968252">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1655800635258" />
-    <state x="477" y="128" key="MultipleFileMergeDialog" timestamp="1655800635277">
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1655947968252" />
+    <state x="477" y="128" key="MultipleFileMergeDialog" timestamp="1655947968271">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1655800635277" />
+    <state x="477" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1655947968271" />
     <state x="349" y="74" key="Registry" timestamp="1655878509979">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="349" y="74" key="Registry/0.0.1536.824@0.0.1536.824" timestamp="1655878509979" />
+    <state x="570" y="134" key="RollbackChangesDialog" timestamp="1655947710203">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="570" y="134" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1655947710203" />
     <state x="270" y="0" key="SettingsEditor" timestamp="1655887230276">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1655887230276" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1655814799236">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1655947665863">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1655814799236" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1655947665863" />
     <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1655705604870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -277,10 +255,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="565" y="190" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1655879342304" />
-    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1655877731450">
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1655947949805">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1655877731450" />
+    <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1655947949805" />
     <state x="178" y="107" key="new project wizard" timestamp="1655878779537">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

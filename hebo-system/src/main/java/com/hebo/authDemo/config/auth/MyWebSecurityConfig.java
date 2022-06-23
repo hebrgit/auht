@@ -1,27 +1,13 @@
-package com.hebo.authDemo.config;
+package com.hebo.authDemo.config.auth;
 
-import com.hebo.authDemo.service.impl.LoginUserService;
+import com.hebo.authDemo.filter.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
-import org.springframework.security.config.annotation.SecurityBuilder;
-import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
-import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
-
-import java.net.HttpCookie;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
  * @ClassName MyWebSecurityConfig
@@ -31,8 +17,6 @@ import java.net.HttpCookie;
 @Configuration
 public class MyWebSecurityConfig {
 
-//    @Autowired
-//    private MyAuthenticationManager myAuthenticationManager;
 
     @Autowired
     private CustomizeAuthenticationEntryPoint entryPoint;
@@ -43,7 +27,7 @@ public class MyWebSecurityConfig {
     @Autowired
     private CustomizeLoginFailHandler failHandler;
     @Autowired
-     MyAuthenticationProvider authenticationProvider;
+    MyAuthenticationProvider authenticationProvider;
 
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
@@ -68,19 +52,10 @@ public class MyWebSecurityConfig {
                 .authenticationEntryPoint(entryPoint)
                 .and()
                 .authenticationProvider(authenticationProvider)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
 
 
-
-//    @Bean
-//    AuthenticationManager ldapAuthenticationManager(
-//            BaseLdapPathContextSource contextSource) {
-//        LdapBindAuthenticationManagerFactory factory =
-//                new LdapBindAuthenticationManagerFactory(contextSource);
-//        factory.setUserDnPatterns("uid={0},ou=people");
-//        factory.setUserDetailsContextMapper(new PersonContextMapper());
-//        return factory.createAuthenticationManager();
-//    }
 
 }
