@@ -14,4 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface IUserService extends IService<User> {
 
     User selectUserInfo(String userName);
+
+    void logout();
+
 }

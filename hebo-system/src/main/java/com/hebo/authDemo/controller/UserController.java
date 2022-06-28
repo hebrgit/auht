@@ -29,8 +29,10 @@ public class UserController {
     private IUserService userService;
 
 
-    @GetMapping("/list")
-    public Response list () {
+    @GetMapping("/logout")
+    public Response logout () {
+
+        userService.logout();
 
         return Response.success();
 
