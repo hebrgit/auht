@@ -26,7 +26,7 @@ public class LoginUser implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return user.getSysMenus();
+        return null;
     }
 
     @Override

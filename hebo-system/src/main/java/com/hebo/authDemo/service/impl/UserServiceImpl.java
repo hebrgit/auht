@@ -1,6 +1,8 @@
 package com.hebo.authDemo.service.impl;
 
 import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
+import com.hebo.authDemo.entity.LoginUser;
 import com.hebo.authDemo.entity.User;
 import com.hebo.authDemo.mapper.UserMapper;
 import com.hebo.authDemo.service.IUserService;
@@ -32,9 +34,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public void logout() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        Object principal = authentication.getPrincipal();
-        User user = JSON.parseObject(principal.toString(), User.class);
-        redisCache.deleteObject(user.getUserId().toString());
+        LoginUser loginUser = (LoginUser)authentication.getPrincipal();
+        redisCache.deleteObject(loginUser.getUser().getUserId().toString());
 
     }
 }

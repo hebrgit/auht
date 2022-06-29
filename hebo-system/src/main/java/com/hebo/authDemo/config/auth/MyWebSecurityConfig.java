@@ -26,8 +26,8 @@ public class MyWebSecurityConfig {
 
     @Autowired
     private CustomizeLoginFailHandler failHandler;
-    @Autowired
-    MyAuthenticationProvider authenticationProvider;
+//    @Autowired
+//    MyAuthenticationProvider authenticationProvider;
 
     @Autowired
     private JwtAuthenticationFilter jwtAuthenticationFilter;
@@ -41,7 +41,7 @@ public class MyWebSecurityConfig {
                 //不通过session获取securityContexter
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .authorizeRequests(authorize -> authorize.antMatchers("/login","/user/login").permitAll()
+                .authorizeRequests(authorize -> authorize
                         .anyRequest().authenticated()
                 )
                 .formLogin().permitAll()
@@ -49,9 +49,10 @@ public class MyWebSecurityConfig {
                 .failureHandler(failHandler)
                 .and()
                 .exceptionHandling()
+
                 .authenticationEntryPoint(entryPoint)
                 .and()
-                .authenticationProvider(authenticationProvider)
+//                .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }

@@ -44,9 +44,4 @@ public class User implements Serializable {
 
     private int status;
 
-    @TableField(exist = false)
-    private List<SysMenu> sysMenus;
-
-
-    private List<SysUserRole> sysUserRoles;
 }
