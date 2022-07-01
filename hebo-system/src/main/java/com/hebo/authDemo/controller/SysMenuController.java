@@ -48,6 +48,7 @@ public class SysMenuController {
         if (CollectionUtil.isNotEmpty(sysMenus)){
             sysMenus.forEach(x->{
                 if(x.getParentId().equals(sysMenu.getMenuId())){
+                    x.setHasChildren(true);
                     menus.add(x);
                     sysMenu.setSysMenus(menus);
                 }

@@ -49,6 +49,8 @@ public class SysMenu implements GrantedAuthority {
     private Integer deleteFlag;
     @TableField(exist = false)
     List<SysMenu> sysMenus;
+    @TableField(exist = false)
+    private Boolean hasChildren;
     @Override
     public String getAuthority() {
         return getMenuId().toString();
